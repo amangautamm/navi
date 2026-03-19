@@ -1,0 +1,79 @@
+{
+  "name": "navi",
+  "displayName": "Navi",
+  "description": "Your AI co-navigator for VS Code. Full project + file agent powered by local Ollama. Free, unlimited, uncensored.",
+  "version": "1.0.0",
+  "publisher": "amanblaze",
+  "author": { "name": "Aman Kumar", "url": "https://github.com/amangautamm" },
+  "repository": { "type": "git", "url": "https://github.com/amangautamm/navi" },
+  "homepage": "https://github.com/amangautamm/navi",
+  "bugs": { "url": "https://github.com/amangautamm/navi/issues" },
+  "license": "MIT",
+  "galleryBanner": { "color": "#030508", "theme": "dark" },
+  "keywords": ["ai","copilot","ollama","coding","agent","autocomplete","local","free","uncensored"],
+  "engines": { "vscode": "^1.74.0" },
+  "categories": ["Other","Machine Learning"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./src/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "naviPanel", "title": "Navi AI", "icon": "$(octoface)" }
+      ]
+    },
+    "views": {
+      "naviPanel": [
+        { "type": "webview", "id": "navi.panel", "name": "Navi" }
+      ]
+    },
+    "commands": [
+      { "command": "navi.fixProject",   "title": "Navi: Fix ALL Project Errors" },
+      { "command": "navi.fixFile",      "title": "Navi: Fix This File" },
+      { "command": "navi.agentPrompt",  "title": "Navi: Run Agent" },
+      { "command": "navi.explainFile",  "title": "Navi: Explain This File" },
+      { "command": "navi.refactorFile", "title": "Navi: Refactor This File" },
+      { "command": "navi.testFile",     "title": "Navi: Write Tests for This File" },
+      { "command": "navi.optimizeFile", "title": "Navi: Optimize This File" },
+      { "command": "navi.docsFile",     "title": "Navi: Add Docs to This File" },
+      { "command": "navi.secureFile",   "title": "Navi: Security Check This File" },
+      { "command": "navi.switchScope",  "title": "Navi: Switch Project / File Mode" },
+      { "command": "navi.changeModel",  "title": "Navi: Change AI Model" }
+    ],
+    "menus": {
+      "editor/context": [{ "submenu": "navi.menu", "group": "0_navi" }],
+      "editor/title": [
+        { "command": "navi.fixFile",     "group": "navigation" },
+        { "command": "navi.explainFile", "group": "navigation" }
+      ],
+      "navi.menu": [
+        { "command": "navi.fixFile" },    { "command": "navi.explainFile" },
+        { "command": "navi.refactorFile"},{ "command": "navi.testFile" },
+        { "command": "navi.optimizeFile"},{ "command": "navi.docsFile" },
+        { "command": "navi.secureFile" }, { "command": "navi.fixProject" }
+      ]
+    },
+    "submenus": [{ "id": "navi.menu", "label": "Navi AI" }],
+    "keybindings": [
+      { "command": "navi.fixProject",  "key": "ctrl+shift+p", "mac": "cmd+shift+p", "when": "!inQuickOpen" },
+      { "command": "navi.fixFile",     "key": "ctrl+shift+f", "mac": "cmd+shift+f" },
+      { "command": "navi.agentPrompt", "key": "ctrl+shift+a", "mac": "cmd+shift+a" },
+      { "command": "navi.explainFile", "key": "ctrl+shift+e", "mac": "cmd+shift+e" }
+    ],
+    "configuration": {
+      "title": "Navi AI",
+      "properties": {
+        "navi.model":        { "type": "string",  "default": "dolphin-llama3:8b",  "description": "Primary model (chat/agent/general)" },
+        "navi.codingModel":  { "type": "string",  "default": "qwen2.5-coder:7b",   "description": "Coding model (fix/refactor/generate)" },
+        "navi.fastModel":    { "type": "string",  "default": "qwen2.5-coder:1.5b", "description": "Fast model (ghost text)" },
+        "navi.host":         { "type": "string",  "default": "http://localhost:11434" },
+        "navi.uncensored":   { "type": "boolean", "default": true },
+        "navi.autoComplete": { "type": "boolean", "default": true },
+        "navi.autoDebug":    { "type": "boolean", "default": true },
+        "navi.autoApply":    { "type": "boolean", "default": false },
+        "navi.maxTokens":    { "type": "number",  "default": 2048 }
+      }
+    }
+  },
+  "scripts": { "package": "npx @vscode/vsce package --no-dependencies" },
+  "devDependencies": { "@vscode/vsce": "^2.22.0" }
+}
