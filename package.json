@@ -1,8 +1,9 @@
 {
-  "name": "navi",
-  "displayName": "Navi",
+  "name": "navi-ai",
+  "displayName": "Navi Ai",
+  "icon": "assets/icon.png",
   "description": "Your AI co-navigator for VS Code. Full project + file agent powered by local Ollama. Free, unlimited, uncensored.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "amanblaze",
   "author": { "name": "Aman Kumar", "url": "https://github.com/amangautamm" },
   "repository": { "type": "git", "url": "https://github.com/amangautamm/navi" },
