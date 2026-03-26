@@ -1,8 +1,8 @@
 # 🧭 Navi Ai: The Ultimate Full-Stack Project Generator
 
 [![Version](https://img.shields.io/badge/version-2.0.1-blue.svg)](https://github.com/amangautamm/navi)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/Amanblaze.navi-ai)](https://marketplace.visualstudio.com/items?itemName=Amanblaze.navi-ai)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/Amanblaze.navi-ai)](https://marketplace.visualstudio.com/items?itemName=Amanblaze.navi-ai)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/amanblaze.navi-ai)](https://marketplace.visualstudio.com/items?itemName=amanblaze.navi-ai)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/amanblaze.navi-ai)](https://marketplace.visualstudio.com/items?itemName=amanblaze.navi-ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Navi Ai** is a high-performance VS Code extension designed to accelerate your development workflow. By answering a few simple questions, Navi auto-generates a production-ready, full-stack project structure complete with boilerplate code, authentication, database integration, and more.
