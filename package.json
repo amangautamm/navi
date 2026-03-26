@@ -1,0 +1,54 @@
+{
+  "name": "navi",
+  "displayName": "Navi Ai",
+  "description": "Auto-generate full stack project structure with boilerplate code",
+  "version": "2.0.0",
+  "publisher": "amanblaze",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amangautamm/navi.git"
+  },
+  "author": "Rauheen Hasan at Amanblaze",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "navi.createProject",
+        "title": "🧭 Navi: Create New Project"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "navi.createProject",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "@vscode/test-electron": "^2.5.2",
+    "glob": "^8.1.0",
+    "mocha": "^11.7.5",
+    "typescript": "^5.0.0"
+  }
+}

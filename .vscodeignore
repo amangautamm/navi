@@ -1,0 +1,15 @@
+.vscode/**
+.vscode-tesout/**
+node_modules/**
+.vscode/**
+.vscode-test/**
+vsc-extension-quickstart.md
+dev/**
+.gitignore
+tsconfig.json
+**/*.map
+test-output/
+src/verify_generation.ts
+test-run.ts
+test-out.txt
+node_modules/
