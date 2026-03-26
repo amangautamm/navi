@@ -2,7 +2,7 @@
   "name": "navi-ai",
   "displayName": "Navi Ai",
   "description": "Auto-generate full stack project structure with boilerplate code",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "publisher": "amanblaze",
   "icon": "images/icon.png",
   "repository": {
